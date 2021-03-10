@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/mateusz/dev/magisterka/soww/lab1/integral.c" "/home/mateusz/dev/magisterka/soww/cmake-build-debug/CMakeFiles/soww.dir/lab1/integral.c.o"
   "/home/mateusz/dev/magisterka/soww/lab1/pi.c" "/home/mateusz/dev/magisterka/soww/cmake-build-debug/CMakeFiles/soww.dir/lab1/pi.c.o"
+  "/home/mateusz/dev/magisterka/soww/lab2/lab2.c" "/home/mateusz/dev/magisterka/soww/cmake-build-debug/CMakeFiles/soww.dir/lab2/lab2.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

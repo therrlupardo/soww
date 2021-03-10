@@ -86,6 +86,9 @@
 		<Unit filename="/home/mateusz/dev/magisterka/soww/lab1/pi.c">
 			<Option target="soww"/>
 		</Unit>
+		<Unit filename="/home/mateusz/dev/magisterka/soww/lab2/lab2.c">
+			<Option target="soww"/>
+		</Unit>
 		<Unit filename="/home/mateusz/dev/magisterka/soww/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

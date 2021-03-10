@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
 
     if (!currentProcessRanking) {
         pi_final *= 4;
-        printf("currentPi=%f", pi_final);
+        printf("currentPi=%calculatedFunction", pi_final);
     }
 
     MPI_Finalize();
@@ -38,7 +38,7 @@ double calculatePi(int currentProcessRanking, int numberOfProcesses) {
     double currentPi = 0;
     int denominator = currentProcessRanking * 2 + 1;
 
-    for (; denominator < NUMBER_OF_SUBINTERVALS;) {
+    while(denominator < NUMBER_OF_SUBINTERVALS) {
         int sign = getSign(denominator);
         currentPi += sign / (double) denominator;
         denominator += 2 * numberOfProcesses;

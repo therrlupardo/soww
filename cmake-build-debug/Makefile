@@ -197,6 +197,33 @@ lab1/pi.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/soww.dir/build.make CMakeFiles/soww.dir/lab1/pi.c.s
 .PHONY : lab1/pi.c.s
 
+lab2/lab2.o: lab2/lab2.c.o
+
+.PHONY : lab2/lab2.o
+
+# target to build an object file
+lab2/lab2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/soww.dir/build.make CMakeFiles/soww.dir/lab2/lab2.c.o
+.PHONY : lab2/lab2.c.o
+
+lab2/lab2.i: lab2/lab2.c.i
+
+.PHONY : lab2/lab2.i
+
+# target to preprocess a source file
+lab2/lab2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/soww.dir/build.make CMakeFiles/soww.dir/lab2/lab2.c.i
+.PHONY : lab2/lab2.c.i
+
+lab2/lab2.s: lab2/lab2.c.s
+
+.PHONY : lab2/lab2.s
+
+# target to generate assembly for a file
+lab2/lab2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/soww.dir/build.make CMakeFiles/soww.dir/lab2/lab2.c.s
+.PHONY : lab2/lab2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +239,9 @@ help:
 	@echo "... lab1/pi.o"
 	@echo "... lab1/pi.i"
 	@echo "... lab1/pi.s"
+	@echo "... lab2/lab2.o"
+	@echo "... lab2/lab2.i"
+	@echo "... lab2/lab2.s"
 .PHONY : help
 
 

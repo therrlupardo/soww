@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/soww.dir/lab1/pi.c.o CMakeFiles/soww.dir/lab1/integral.c.o  -o soww 
+/usr/bin/cc -g   CMakeFiles/soww.dir/lab1/pi.c.o CMakeFiles/soww.dir/lab1/integral.c.o CMakeFiles/soww.dir/lab2/lab2.c.o  -o soww 
