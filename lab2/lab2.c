@@ -37,7 +37,7 @@ void manageSlaves(int numberOfProcesses, MPI_Status *status, double *temporaryRe
     distributeCalculationsOverSlaves(numberOfProcesses, status, temporaryResult, range, &result);
     result = receiveResults(numberOfProcesses, status, result, temporaryResult);
     shutDownSlaves(numberOfProcesses);
-    printf("\nHi, I am process 0, the result is %f\n", result);
+    printf("\nHi, I am process 0, the result is %.30f\n", result);
 }
 
 void distributeCalculationsOverSlaves(int numberOfProcesses, MPI_Status *status, double *temporaryResult, double *range,
@@ -122,12 +122,13 @@ bool isEnoughSubranges(int numberOfProcesses) {
 }
 
 double calculatedFunction(double x) {
-    return sin(x) * sin(x) / x;
+    return sin(x);
 }
 
-double simpleIntegration(double a, double b) {
+double simpleIntegration(double start, double end) {
     double sum = 0;
-    for (double i = a; i < b; i += PRECISION)
-        sum += calculatedFunction(i) * PRECISION;
+    for (double i = start; i < end; i += PRECISION) {
+        sum += (calculatedFunction(i) + calculatedFunction(i + PRECISION)) * PRECISION / 2;
+    }
     return sum;
 }

@@ -16,7 +16,7 @@
 
 double calculatedFunction(double x);
 
-double simpleIntegration(double a, double b);
+double simpleIntegration(double start, double end);
 
 bool isEnoughSubranges(int numberOfProcesses);
 
