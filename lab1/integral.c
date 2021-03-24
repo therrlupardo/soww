@@ -4,7 +4,7 @@
 
 #define NUMBER_OF_SUBINTERVALS 10000000
 #define INTERVAL_START 1
-#define INTERVAL_END 100
+#define INTERVAL_END 1000
 
 double calculateTrapezoidIntegral(int currentProcessRanking, int numberOfProcesses);
 

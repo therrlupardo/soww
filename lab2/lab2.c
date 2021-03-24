@@ -50,15 +50,7 @@ void distributeCalculationsOverSlaves(int numberOfProcesses, MPI_Status *status,
 
 void distributeRemainingSubrange(MPI_Status *status, double *temporaryResult, double *range, double *result) {
     receiveTemporaryResult(status, result, temporaryResult);
-#ifdef DEBUG
-    printf ("\nMaster received result %f from process %d", temporaryResult, status.MPI_SOURCE);
-        fflush (stdout);
-#endif
     updateEndOfRange(range);
-#ifdef DEBUG
-    printf ("\nMaster sending range %f,%f to process %d", range[0], range[1], status.MPI_SOURCE);
-         fflush (stdout);
-#endif
     MPI_Send(range, 2, MPI_DOUBLE, (*status).MPI_SOURCE, DATA, MPI_COMM_WORLD);
     range[0] = range[1];
 }

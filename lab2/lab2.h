@@ -10,7 +10,7 @@
 #define FINISH 2
 
 #define INTERVAL_START 1
-#define INTERVAL_END 100
+#define INTERVAL_END 1000
 
 //#define DEBUG
 
