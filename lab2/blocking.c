@@ -1,4 +1,4 @@
-#include "lab2.h"
+#include "blocking.h"
 
 int main(int argc, char **argv) {
     int rankingOfCurrentProcess, numberOfProcesses;
