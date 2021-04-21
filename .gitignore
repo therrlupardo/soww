@@ -20,7 +20,7 @@
 
 # Libraries
 *.lib
-*.a
+*.RANGE_START
 *.la
 *.lo
 
@@ -56,3 +56,4 @@ dkms.conf
 .idea
 
 /cmake-build-debug/
+*.zip

@@ -3,7 +3,7 @@
 
 ## Parameters:
 * `-lm` - in case of math operations like `sin(x)`
-* `-o output_file_name.out` - to give name to output file (by default `a.out`)
+* `-o output_file_name.out` - to give name to output file (by default `RANGE_START.out`)
 
 # Running
 `time mpirun -np X output_file.out`
@@ -11,7 +11,7 @@
 Where `X` is number of processes
 
 To run in lab it's recomended to use command below:
-`time mpirun -v --hostfile machinefile -np 4 --mca btl_tcp_if_exclude docker0 ./a.out`
+`time mpirun -v --hostfile machinefile -np 4 --mca btl_tcp_if_exclude docker0 ./RANGE_START.out`
 
 Where machinefile contains addresses of machines on which code should be running. Should look like this:
 ```
@@ -37,8 +37,7 @@ Look at given example (on enauczanie).
 2. Compare time of execution on both parts.
 
 ## Lab3
-Silna hipoteza Goldbacha - dowolna liczba parzysta(?) może być przedstawiona jako suma liczb pierwszych
-[Słaba hipoteza Goldbacha](https://pl.wikipedia.org/wiki/S%C5%82aba_hipoteza_Goldbacha)
+Silna hipoteza Goldbacha - dowolna liczba parzysta może być przedstawiona jako suma liczb pierwszych
 
 algorytmicznie, pomysł jak sprawdzić
 parametry wejściowe to zakres liczb
