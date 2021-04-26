@@ -9,8 +9,17 @@ int numberOfPrimes = 0;
 
 int* primes;
 
+
+void printtime(struct timeval *start,struct timeval *stop) {
+    long time=1000000*(stop->tv_sec-start->tv_sec)+stop->tv_usec-start->tv_usec;
+
+    printf("\nMPI execution time=%ld microseconds\n",time);
+
+}
+
 int main(int argc, char **argv) {
 
+    struct timeval start,stop;
     // Initialize MPI
     MPI_Init(&argc, &argv);
 
@@ -35,8 +44,10 @@ int main(int argc, char **argv) {
     primes = (int *) malloc((RANGE_END - RANGE_START) * sizeof(int));
 
     bool result;
-    if (isCurrentProcessMaster())
+    if (isCurrentProcessMaster()){
+        gettimeofday(&start,NULL);
         result = masterCheckPrime();
+    }
     else
         result = slaveCheckPrime();
 
@@ -55,6 +66,11 @@ int main(int argc, char **argv) {
     else
         slaveGoldbach();
 
+
+    if (isCurrentProcessMaster()) {
+        gettimeofday(&stop,NULL);
+        printtime(&start,&stop);
+    }
     // Shut down MPI
     MPI_Finalize();
 

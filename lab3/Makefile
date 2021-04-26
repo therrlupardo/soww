@@ -13,7 +13,7 @@ STDLIBS=-lstdc++
 PTHREADSLIBS=-lpthread
 OPENCLLIBS=-lOpenCL
 
-mpi: mpi.c
+mpi: goldbach.c
 	${MPICC} ${CFLAGS} $< -o $@ ${LIBS}
 
 run:

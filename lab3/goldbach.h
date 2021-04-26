@@ -6,6 +6,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <sys/time.h>
 
 #define DATA 0
 #define RESULT 1
