@@ -10,7 +10,7 @@ int numberOfPrimes = 0;
 int* primes;
 
 
-void printtime(struct timeval *start,struct timeval *stop) {
+void printExecutionTime(struct timeval *start, struct timeval *stop) {
     long time=1000000*(stop->tv_sec-start->tv_sec)+stop->tv_usec-start->tv_usec;
 
     printf("\nMPI execution time=%ld microseconds\n",time);
@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
 
     if (isCurrentProcessMaster()) {
         gettimeofday(&stop,NULL);
-        printtime(&start,&stop);
+        printExecutionTime(&start, &stop);
     }
     // Shut down MPI
     MPI_Finalize();
